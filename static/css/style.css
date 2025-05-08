@@ -1,0 +1,588 @@
+/* ============================================
+   ESTILOS GENERALES
+   ============================================ */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0;
+  }
+
+  /* ============================================
+     BANNER SUPERIOR
+     ============================================ */
+     .top-banner {
+      background-color: #6f3301;
+      color: #fff;
+      text-align: center;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+  
+  /* ============================================
+     HEADER PRINCIPAL
+     ============================================ */
+     .main-header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 100px;
+      margin-right: 80px;
+    }
+    
+    .logo span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ff7300;
+    }
+  
+  /* ============================================
+     BARRA DE BÚSQUEDA
+     ============================================ */
+     .search-bar {
+      flex: 1;
+      max-width: 500px;
+      display: flex;
+      margin: 10px;
+    }
+    
+    .search-bar input {
+      flex: 1;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-right: none;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+    }
+    
+    .search-bar button {
+      background-color: #ff6a00;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+    
+    .search-bar button .material-icons {
+      color: white;
+    }
+  
+  /* ============================================
+     BOTONES DEL HEADER
+     ============================================ */
+  .header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .btn {
+    border: 1px solid #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 13px;
+    color: black;
+    border-radius: 6px;
+    font-weight: bold;
+    background: white;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #f3f3f3;
+  }
+  
+  .icon-link img {
+    width: 22px;
+    height: auto;
+    transition: 0.3s;
+  }
+  
+  .icon-link:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* ============================================
+     MEGAMENÚ DE NAVEGACIÓN
+     ============================================ */
+  /* Estilos base para resetear margenes y padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fuentes y estilo global */
+body {
+  font-family: 'Poppins', sans-serif; /* Tipografía moderna */
+}
+
+/* Estilos para la navegación principal */
+.main-nav {
+  background: #ffffff;
+  position: sticky; /* Fija el menú en la parte superior */
+  top: 0;
+  z-index: 999; /* Lo pone por encima de otros elementos */
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+}
+
+/* Estilos del menú (listado de items) */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px; /* Espacio entre ítems */
+  padding: 20px 40px;
+}
+
+/* Estilos para cada ítem del menú */
+.menu li {
+  position: relative;
+}
+
+/* Estilo para los enlaces del menú */
+.menu li a {
+  text-decoration: none;
+  color: #333; /* Color inicial */
+  font-weight: 600;
+  padding: 10px;
+  transition: color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para los enlaces del menú */
+.menu li:hover > a {
+  color: #e60023; /* Cambia el color en hover */
+}
+
+/* Estilo para los dropdowns (submenús) */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border-top: 3px solid #e60023; /* Línea superior roja */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra más profunda */
+  padding: 20px 30px;
+  display: none; /* Oculto por defecto */
+  flex-direction: column;
+  min-width: 220px;
+  animation: fadeIn 0.4s ease forwards; /* Animación de entrada */
+}
+
+/* Muestra el dropdown cuando se hace hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Estilo de los enlaces dentro del dropdown */
+.dropdown-content a {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover para los enlaces dentro del dropdown */
+.dropdown-content a:hover {
+  color: #e60023;
+}
+
+/* Estilo para el dropdown que utiliza grid (como el de servicios) */
+.dropdown-content.grid {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Estilo responsivo */
+  gap: 30px;
+}
+
+/* Muestra el dropdown en grid cuando se hace hover */
+.dropdown:hover .dropdown-content.grid {
+  display: grid;
+}
+
+/* Estilo para las columnas dentro del dropdown */
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para los títulos de las columnas */
+.column p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #222;
+}
+
+/* Estilo para las cajas de promociones */
+.promo-box {
+  background: #f9f9f9;
+  border-radius: 8px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra ligera */
+}
+
+.promo-box img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para el texto en las cajas de promociones */
+.promo-box strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #e60023;
+}
+
+.promo-box p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Animación para el dropdown */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Comienza desde arriba */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Llega a su posición normal */
+  }
+}
+
+  
+  /* ============================================
+     CARRUSEL PRINCIPAL (HERO)
+     ============================================ */
+  .hero-carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    position: relative;
+    height: 500px;
+    margin-top: 15px; /* Puedes aumentar el valor para moverlo más abajo */
+  }
+  
+  .carousel-slides {
+    height: 100%;
+    position: relative;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out; /* Duración y efecto de la transición */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: scale(1.05);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: scale(1.05);
+    overflow: hidden; /* Oculta bordes del img si sale */
+  }
+  
+  .slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la imagen cubra todo el slide */
+    z-index: 0;
+  }
+
+  .slide.active {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1);
+  }
+  
+  .slide-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .slide-content h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada para legibilidad */
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.8s forwards 0.3s;
+  }
+  
+  @keyframes slideUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.8s forwards 0.6s;
+    cursor: pointer;
+    text-decoration: none; /* 🔥 ELIMINA LA RAYA de <a> */
+  }
+  
+  .btn-primary:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: 0.5s;
+    z-index: -1;
+  }
+  
+  .btn-primary:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-primary:hover:before {
+    left: 100%;
+  }
+  
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .carousel-arrow:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .carousel-arrow.prev {
+    left: 20px;
+  }
+  
+  .carousel-arrow.next {
+    right: 20px;
+  }
+  
+  .carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .indicator:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .indicator.active {
+    background-color: #000;
+    transform: scale(1.2);
+    border-color: white;
+}
+
+
+/* ===== PIE DE PÁGINA ===== */
+.footer {
+  background-color: #222;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 0 20px;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Secciones dentro del footer */
+.footer-info,
+.footer-links,
+.footer-social {
+  flex: 1;
+  margin: 20px;
+  min-width: 220px;
+}
+
+/* Títulos del footer */
+.footer h3, .footer h4 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #e60023;
+}
+
+/* Texto y links */
+.footer p, .footer a {
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #e60023;
+}
+
+/* Enlaces rápidos */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+/* Íconos de redes sociales */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+}
+
+/* Parte inferior (copyright) */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #aaa;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+}
+
+

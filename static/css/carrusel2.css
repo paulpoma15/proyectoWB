@@ -1,0 +1,118 @@
+/* ===========================================
+   CARRUSEL 2 PRINCIPAL
+=========================================== */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Contenedor interno de los slides */
+.carousel-slide {
+    position: relative; /* antes era flex, ahora relative */
+    width: 100%;
+    height: 500px;
+}
+
+/* ===========================================
+   SLIDES INDIVIDUALES
+=========================================== */
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none; /* evita clics en slides no visibles */
+}
+
+/* Slide activo */
+.carousel-item.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Imagen dentro del slide */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* ===========================================
+   TEXTO Y BOTONES SOBRE SLIDE
+=========================================== */
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.carousel-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.carousel-text p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Botón principal sobre el slide */
+.btn-carousel {
+    padding: 12px 25px;
+    background-color: #e60023;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-carousel:hover {
+    background-color: #c7001b;
+}
+
+/* ===========================================
+   BOTONES DE NAVEGACIÓN (FLECHAS)
+=========================================== */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+/* Efecto hover en flechas */
+.carousel-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Flecha izquierda (prev) */
+.carousel-btn.prev {
+    left: 20px;
+}
+
+/* Flecha derecha (next) */
+.carousel-btn.next {
+    right: 20px;
+}

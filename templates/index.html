@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/main.css')}}"
+    />
+    <title>Galvan</title>
+  </head>
+
+  <body>
+    
+    <!--Menu despegable-->
+    <nav class="main-nav">
+      <ul>
+        <li class="dropdown">PRODUCTOS ▼
+          <div class="dropdown-content">
+            <!-- Aquí puedes agregar el contenido de CATEGORÍAS -->
+            <a href="#">Abarrotes</a>
+            <a href="#">Libreria</a>
+            <a href="#">Confiteria</a>
+          </div>
+        </li>
+    
+        <li class="dropdown">NOVEDADES ▼
+          <div class="dropdown-content">
+            <a href="#">Ofertas</a>
+            <a href="#">Descuentos</a>
+          </div>
+        </li>
+    
+        <li class="dropdown">QUIENES SOMOS ▼
+          <div class="dropdown-content">
+            <a href="#">BIO</a>
+            <a href="#">Ubicacion</a>
+            <a href="#">Conocenos</a>
+          </div>
+        </li>
+    
+        <li class="dropdown">
+          SERVICIOS ▼
+          <div class="dropdown-content">
+            <!-- Columna: Ojos -->
+            <div class="column">
+              <p>Venta de Productos</p>
+              <a href="#">Venta de Productos</a>
+              <a href="#">Envio</a>
+              <a href="#"></a>
+              <a href="#"></a>
+            </div>
+            <!-- Columna: Labios -->
+            <div class="column">
+              <p>ENVIO</p>
+              <a href="#">L</a>
+              <a href="#"></a>
+            </div>
+            <!-- Columna: Rostro -->
+            <div class="column">
+              <p>Pedidos Anticipados</p>
+              <a href="#"></a>
+              <a href="#"></a>
+              <a href="#"></a>
+              <a href="#"></a>
+              <a href="#"></a>
+              <a href="#"></a>
+            </div>
+            <!-- Columna: Uñas -->
+            <div class="column">
+              <p></p>
+              <a href="#"></a>
+              <a href="#"></a>
+            </div>
+            <!-- Columna: Líneas -->
+            <div class="column">
+              <p></p>
+              <a href="#"></a>
+              <a href="#"></a>
+            </div>
+            <!-- Columna con imágenes promocionales -->
+            <div class="column promo">
+              <div class="promo-box">
+                <img src="https://via.placeholder.com/150x180" alt="ENVIOS" />
+                <strong>ésika PRO</strong>    
+                <p>Maquillaje de alta calidad recomendado por 9/10 profesionales</p>
+              </div>
+              <div class="promo-box">
+                <img src="https://via.placeholder.com/150x180/990000/ffffff" alt="PRODUCTOS" />
+                <strong>Colorfix</strong>
+                <p>Duración 24/7 ¡A prueba de todo!</p>
+              </div>
+            </div>
+          </div>
+        </li>
+    
+        <li class="dropdown">CONTATANOS ▼
+          <div class="dropdown-content">
+            <a href="#">Collares</a>
+            <a href="#">Anillos</a>
+            <a href="#">Pulseras</a>
+          </div>
+        </li>
+    
+        <li class="dropdown"> 
+          <div class="dropdown-content">
+            <a href="#">Para Mujeres</a>
+            <a href="#">Para Hombres</a>
+            <a href="#">Unisex</a>
+          </div>
+        </li>
+    
+        <li class="dropdown"> 
+          <div class="dropdown-content">
+            <a href="#">Mi Cuenta</a>
+            <a href="#">Mis Pedidos</a>
+            <a href="#">Suscripciones</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+    <!--Dom-->
+    <button
+      id="cambiar"
+      class="bg-emerald-800 py-4 px-6 text-center text-white"
+    >
+      Cambiar texto
+      <p id="texto">Texto original</p>
+    </button>
+    <!--Fin Dom-- >
+
+    <!-- Botones con clase común -->
+
+    <div class="flex gap-4 px-4 justify-center my-6">
+      <button class="mi-boton opcion bg-emerald-800 py-3 px-6 text-white rounded hover:bg-emerald-700" data-opcion="1">
+        Cambiar a opción 1
+      </button>
+      <button class="mi-boton opcion bg-sky-800 py-3 px-6 text-white rounded hover:bg-sky-700" data-opcion="2">
+        Cambiar a opción 2
+      </button>
+      <button class="mi-boton opcion bg-rose-800 py-3 px-6 text-white rounded hover:bg-rose-700" data-opcion="3">
+        Cambiar a opción 3
+      </button>
+    </div>
+
+<!-- Banner superior -->
+<div class="top-banner">En tus primeras compras te un descuento en tus envíos</div>
+
+<!-- Header principal -->
+<header class="main-header">
+  <div class="header-content">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="/static/imagenes/logo.png" alt="Logo" />
+      <span>G & O Center</span>
+    </div>
+
+    <!-- Barra de búsqueda -->
+    <form class="search-bar" action="/buscar">
+      <input type="text" placeholder="Buscar............................." name="q" />
+      <button type="submit">
+        <span class="material-icons">search</span>
+      </button>
+    </form>
+
+    <!-- Botones de usuario e íconos -->
+    <div class="header-buttons">
+      <a href="/registro" class="btn">REGISTRARSE</a>
+      <a href="/login" class="btn">INICIAR SESION</a>
+      <a href="/favoritos" class="icon-link" title="Favoritos">
+          <span class="material-icons" style="color: #007bff;">favorite_border</span>
+        </a>
+        <a href="/carrito" class="icon-link" title="Carrito">
+          <span class="material-icons" style="color: #007bff;">shopping_cart</span>
+        </a>          
+    </div>
+  </div>
+
+    <!-- Carrusel -->
+    <div class="carousel-container relative">
+      <div class="carousel-inner">
+        <div class="carousel-item bg-blue-500 text-white flex items-center justify-center h-64">
+          Slide 1
+        </div>
+        <div class="carousel-item bg-green-500 text-white flex items-center justify-center h-64">
+          Slide 2
+        </div>
+        <div class="carousel-item bg-red-500 text-white flex items-center justify-center h-64">
+          Slide 3
+        </div>
+      </div>
+      <button
+        id="prev"
+        class="absolute left-0 top-1/2 transform -translate-y-1/2 text-white px-4 py-2"
+      ></button>
+      <button
+        id="next"
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 text-white px-4 py-2"
+      ></button>
+    </div>
+    <!-- Fin de Carrusel -->
+
+    <!-- Pie de pagina -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+      <p>&copy; 2025 Todos los derechos reservados.</p>
+      <p>Desarrollado con 💗 por Paul Poma</p>
+    </footer>
+    <!-- Fin pie de pagina -->
+
+    <!-- Incluir el archivo JavaScript -->
+    <script src="{{ url_for('static', filename='js/dom.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/carrusel.js') }}"></script>
+  </body>
+</html>
